@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+.bg{
+
+    background-image:url(img/2.jpg); 
+
+  /* Center and scale the image nicely */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pull-right{
+    float: right;
+}
+.pull-left{
+	float: left;
+}
+.card{
+    border: red;
+}
+.card-img-top{
+    height: 300px;
+}
+.text{
+	color:red ;
+}
+.center{
+	text-align: center;	
+	margin-top: 200px;
+}

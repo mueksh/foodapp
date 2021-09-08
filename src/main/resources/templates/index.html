@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="#" th:href="@{/style.css}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title th:text="${title}">Waste Food Management App</title>
+  </head>
+  <body style="background-image:url(img/3.jpg) ;">
+    
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand disabled text-white" href="#">Healthy Food Store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white"  href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page"  href="#"  th:href="@{/add}">Add New Dishe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white"  href="#" th:href="@{/dishes}">Cheap Price Dishes </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#" th:href="@{/about}">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Card for the Restaurants-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card mt-3">
+               <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
+               <div class="card-body">
+                 <h5 class="card-title">Misssion</h5>
+                 <p class="card-text">With the help of this app our misssion to manage the food 
+                    which is waste mostly in the Restaurants,homes etc.
+                 </p>
+                </div>
+             </div>
+           </div>
+           <div class="col-md-3">
+          <div class="card mt-3">
+            <img class="card-img-top" src="img/5.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Who Can Use</h5>
+              <p This class="card-text">This app can be use by everyone means who needs food
+                for CHEAP RATE or want to donate food for poor.</p>
+              
+            </div>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="card mt-3">
+            <img class="card-img-top" src="img/6.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Restaurants Roles</h5>
+              <p class="card-text">Restaurants sale their waste food at cheap rate or donate 
+                to peoples who need it by proving information on this app.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mt-3">
+            <img class="card-img-top" src="img/7.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Peoples Work</h5>
+              <p class="card-text">By this app peoples able to purchases or can be reach at the place where some 
+                peoples use to donate food.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+      <!--Card for information-->
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-5 mb-3">
+                    <h5 class="card-header">Global food losses and food waste</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Overview of the key findings:</h5>
+                      <p class="card-text"> * Roughly one third of the food produced in 
+                          the world for human consumption every year — approximately 1.3 
+                          billion tonnes — gets lost or wasted.</p>
+
+                          <div class="">
+                            <img
+                            src="img/1.jpg"
+                            alt=""
+                            class="img-responsive pull-right"
+                            style="max-height: 190px;"
+                            ></div>
+                      <p class="card-text"> * Every year, consumers in rich countries waste almost as 
+                          much food (222 million tonnes) as the entire net food production of sub-Saharan Africa 
+                          (230 million tonnes).</p>
+                      <p class="card-text"> * The amount of food lost or wasted every year is equivalent to more 
+                          than half of the world's annual cereals crop (2.3 billion tonnes in 2009/2010). </p>
+                      <p class="card-text"> * Food loss and waste also amount to a major squandering 
+                          of resources, including water, land, energy, labour and capital and 
+                          needlessly produce greenhouse gas emissions, contributing to global warming and climate 
+                          change.</p> 
+                      <p class="card-text"> * In developing countries food waste and losses occur mainly at early 
+                          stages of the food value chain and can be traced back to financial, managerial and 
+                          technical constraints in harvesting techniques as well as storage –and cooling facilities.
+                           Thus, a strengthening of the supply chain through the support farmers and investments in 
+                           infrastructure, transportation, as well as in an expansion of the food –and packaging 
+                           industry could help to reduce the amount of food loss and waste.</p> 
+                      <p class="card-text"> * In medium- and high-income countries food is wasted and lost mainly 
+                          at later stages in the supply chain. Differing from the situation in developing countries, 
+                          the behaviour of consumers plays a huge part in industrialized countries. Moreover, the 
+                          study identified a lacking coordination between actors in the supply chain as a contributing 
+                          factor. Farmer-buyer agreements can be helpful to increase the level of coordination. 
+                          Additionally, raising awareness among industries, retailers and consumers as well as 
+                          finding beneficial use for save food that is presently thrown away are useful measures to 
+                          decrease the amount of losses and waste.</p> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+     
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

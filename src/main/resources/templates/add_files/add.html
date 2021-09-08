@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="#" th:href="@{/style.css}">
+    <script src="javascript.js"></script>
+    <title>Waste Food Management App</title>
+  </head>
+  <body class="bg">
+    
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand disabled text-white" href="#">Healthy Food Store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white"  th:href="@{/}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" th:href="@{/dishes}">Cheap Price Dishes </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#" th:href="@{/about}">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="card text-center mt-4">
+              <div class="card-header">
+                Add Food Information !! 
+              </div>
+              <div class="card-body">
+
+                <form th:action="@{/process_register}"  method="post" th:object="${food}">
+                  <div class="form-group">
+                    <input type="text" class="form-control" th:field="*{restaurantName}" aria-describedby="emailHelp" placeholder="Enter Restaurant/Title Name." required>
+                  </div>
+                  <div class="form-group mt-2">
+                    <input type="text" class="form-control" th:field="*{distributorName}" placeholder="Enter distributor Name." required>
+                  </div>
+                  <div class="form-group mt-2">
+                    <input type="email" class="form-control" th:field="*{email}" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-group mt-2">
+                  <label class="pull-left">Phone No.</label>
+                    <input type="number" class="form-control" th:field="*{phone}" placeholder="Phone No." required>
+                  </div>
+                  <div class="form-group mt-2">
+                    <input type="text" class="form-control" th:field="*{address}" placeholder="Full address of food distribution." required>
+                  </div>
+                  <div class="form-group mt-2">
+                    <input type="text" class="form-control" th:field="*{foodDetail}" placeholder="Food Detail which is for sale or donate." required>
+                  </div>
+                  <div class="form-group mt-2">
+                    <label class="pull-left">End Date</label>
+                    <input type="date" class="form-control" th:field="*{enddate}" placeholder="Due date." required>
+                  </div>
+                  <div class="form-group">
+                  <label class="pull-left">Price.</label>
+                    <input type="number" class="form-control mt-2" th:field="*{price}" placeholder="Food Price.">
+                  </div>
+                   <div>
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                     <button type="reset" class="btn btn-danger mt-2">Reset</button>
+                  </div>
+                  
+                </form>
+               </div>
+              <div class="card-footer text-muted">
+                Mukesh Form.....
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
