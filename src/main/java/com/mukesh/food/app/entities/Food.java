@@ -1,25 +1,29 @@
 package com.mukesh.food.app.entities;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.Size;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-@javax.persistence.Entity
-@Table(name = "foodInfo")
+@Document
 public class Food {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	@Field
 	private String restaurantName;
+	@Field
 	private String distributorName;
+	@Field
 	private String address;
+	@Field
 	private long phone;
+	@Field
 	private String email;
+	@Field
 	private String foodDetail;
+	@Field
 	private String enddate;
+	@Field
 	private double price;
 
 	
@@ -103,3 +107,4 @@ public class Food {
 				+ ", enddate=" + enddate + ", price=" + price + "]";
 	}
 }
+
