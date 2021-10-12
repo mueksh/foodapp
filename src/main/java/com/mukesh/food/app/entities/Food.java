@@ -1,11 +1,15 @@
 package com.mukesh.food.app.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
 public class Food {
+	
+	@Transient
+	public static final  String SEQUENCE_NAME="user_sequence";   
 	
 	@Id
 	private int id;
@@ -25,17 +29,14 @@ public class Food {
 	private String enddate;
 	@Field
 	private double price;
-
-	
-	
-	public String getRestaurantName() {
-		return restaurantName;
-	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getRestaurantName() {
+		return restaurantName;
 	}
 	public void setRestaurantName(String restaurantName) {
 		this.restaurantName = restaurantName;
@@ -82,7 +83,13 @@ public class Food {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+	public static String getSequenceName() {
+		return SEQUENCE_NAME;
+	}
+	public Food() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Food(int id, String restaurantName, String distributorName, String address, long phone, String email,
 			String foodDetail, String enddate, double price) {
 		super();
@@ -96,15 +103,13 @@ public class Food {
 		this.enddate = enddate;
 		this.price = price;
 	}
-	public Food() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	@Override
 	public String toString() {
 		return "Food [id=" + id + ", restaurantName=" + restaurantName + ", distributorName=" + distributorName
 				+ ", address=" + address + ", phone=" + phone + ", email=" + email + ", foodDetail=" + foodDetail
 				+ ", enddate=" + enddate + ", price=" + price + "]";
 	}
+	
+	
+	
 }
-
